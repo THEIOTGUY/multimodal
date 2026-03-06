@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Generated audio / dataset files (regenerate with dataset builder)
+data/*/audio/
+data/raw/
+data/
+
+# Large archives
+*.zip
+*.tar
+*.tar.gz
+*.tar.gz.part*
+
+# Model checkpoints
+checkpoints/
+StreamVLN/checkpoints/
+StreamVLN/data/
+
+# StreamVLN large data
+StreamVLN/data/trajectory_data/
+StreamVLN/data/scene_datasets/
+StreamVLN/data/datasets/
+
+# Claude AI session files
+.claude/
+
+# Node.js (local Claude Code install)
+node_modules/
+package.json
+package-lock.json
+
+# Binary documents and screenshots
+*.docx
+*.pdf
+Screenshot*.png
+
+# Logs
+*.log
+wandb/
+runs/
+
+# Environment
+.env
+.venv
+env/
+venv/
+multimodal_env/
+
+# Colab/local tooling
+micromamba
+.micromamba/
+miniconda/
+habitat-lab/
+habitat-lab-v0-2-4/
+.colab_envs/
+.ipynb_checkpoints/
+
+# StreamVLN logs & scripts
+StreamVLN/logs/
+StreamVLN/download_mp3d.py
+StreamVLN/scripts/download_and_generate.sh
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

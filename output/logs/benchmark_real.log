@@ -1,0 +1,181 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.69s/it]
+Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:04,  1.53s/it]
+Loading checkpoint shards:  60%|██████    | 3/5 [00:04<00:02,  1.44s/it]
+Loading checkpoint shards:  80%|████████  | 4/5 [00:05<00:01,  1.40s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.20s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.33s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+[bench] scenes scanned: 10, with placements: 30
+[bench] unique wavs to caption: 180
+[caption] 66 new wavs need Qwen captions
+[caption] loading Qwen2.5-Omni-7B…
+  [1/66] 1-100210-A-36.wav -> A high-pitched whine is being emitted by a small motor.
+  [2/66] 1-101336-A-30.wav -> A loud knocking sound is being made on a door.
+  [3/66] 1-103995-A-30.wav -> A wooden object is being knocked on by a hard object.
+  [4/66] 1-103999-A-30.wav -> A wooden object is being knocked on by a hard object.
+  [5/66] 1-105224-A-22.wav -> A crowd of people is clapping their hands.
+  [6/66] 1-110537-A-22.wav -> A large crowd is applauding.
+  [7/66] 1-115920-A-22.wav -> A group of people are clapping their hands.
+  [8/66] 1-13613-A-37.wav -> A bell rings loudly and for a long time.
+  [9/66] 1-155858-C-25.wav -> A person walking on a hard surface with shoes that are squeaking.
+  [10/66] 1-187207-A-20.wav -> A baby is crying.
+  [11/66] 1-19118-A-24.wav -> A person coughing.
+  [12/66] 1-19872-A-36.wav -> A vacuum cleaner is being used to clean a floor.
+  [13/66] 1-19872-B-36.wav -> A loud machine is running and a woman is speaking in the background.
+  [14/66] 1-20133-A-39.wav -> A loud crash is followed by a series of clanking.
+  [15/66] 1-21896-A-35.wav -> A machine is vibrating and making a high pitched squealing sound.
+  [16/66] 1-21934-A-38.wav -> A clock is ticking.
+  [17/66] 1-223162-A-25.wav -> A loud thump is followed by silence.
+  [18/66] 1-26143-A-21.wav -> A person sneezes nearby.
+  [19/66] 1-26188-A-30.wav -> A door is being knocked on by someone.
+  [20/66] 1-27165-A-35.wav -> A loud, continuous buzzing sound is coming from a source that is not visible.
+  [21/66] 1-29680-A-21.wav -> A human sneezes and then coughs.
+  [22/66] 1-30039-A-26.wav -> A woman is speaking and laughing.
+  [23/66] 1-30709-A-23.wav -> A human is breathing in a slow and controlled manner.
+  [24/66] 1-30709-C-23.wav -> A person is breathing heavily.
+  [25/66] 1-31748-A-21.wav -> A sneeze is made by a human.
+  [26/66] 1-32373-A-35.wav -> A loud motor is running and vibrating.
+  [27/66] 1-32373-B-35.wav -> A loud motor is idling in the background.
+  [28/66] 1-33658-A-26.wav -> A woman is laughing.
+  [29/66] 1-34853-A-37.wav -> A robotic voice is speaking.
+  [30/66] 1-35687-A-38.wav -> A clock is ticking.
+  [31/66] 1-36393-A-23.wav -> A person is sniffing.
+  [32/66] 1-37226-A-29.wav -> A loud, sharp hissing sound is made by a large animal.
+  [33/66] 1-40621-A-28.wav -> A person is snoring.
+  [34/66] 1-40967-A-28.wav -> A person is snoring and breathing heavily.
+  [35/66] 1-41615-A-34.wav -> A can is being opened with a can opener.
+  [36/66] 1-42139-A-38.wav -> A clock is ticking.
+  [37/66] 1-45641-A-27.wav -> A toothbrush is being used to clean teeth.
+  [38/66] 1-45645-A-31.wav -> A clicking noise is made repeatedly in short bursts.
+  [39/66] 1-47273-A-21.wav -> A sneeze is followed by a woman laughing.
+  [40/66] 1-49098-A-35.wav -> A loud click is followed by a loud thump.
+  [41/66] 1-51805-A-33.wav -> A creaky door is being opened and closed.
+  [42/66] 1-51805-B-33.wav -> A squeaky door is being opened and closed.
+  [43/66] 1-51805-D-33.wav -> A creaky door is being opened and closed.
+  [44/66] 1-51805-E-33.wav -> A creaky door is being opened and closed.
+  [45/66] 1-51805-F-33.wav -> A door is creaking as it is opened and closed.
+  [46/66] 1-51805-H-33.wav -> A door creaks as it is opened and closed.
+  [47/66] 1-53444-A-28.wav -> A person is snoring loudly.
+  [48/66] 1-53663-A-24.wav -> A person coughs four times in quick succession.
+  [49/66] 1-54505-A-21.wav -> A person sneezes into the air.
+  [50/66] 1-56270-A-29.wav -> A person is drinking water and then spitting it out.
+  [51/66] 1-57163-A-38.wav -> A clock is ticking.
+  [52/66] 1-58792-A-24.wav -> A person coughs and then sneezes.
+  [53/66] 1-58923-B-27.wav -> A person is brushing their teeth.
+  [54/66] 1-60460-A-36.wav -> A high-pitched whirring sound is coming from a household robot.
+  [55/66] 1-60997-A-20.wav -> A baby is crying loudly.
+  [56/66] 1-61212-A-32.wav -> A series of quick, repetitive, and loud typing sounds.
+  [57/66] 1-62594-A-32.wav -> A clicking noise is followed by a man speaking.
+  [58/66] 1-62850-A-38.wav -> A clock is ticking.
+  [59/66] 1-68670-A-34.wav -> A cap gun is being fired several times.
+  [60/66] 1-72195-B-37.wav -> A loud alarm clock rings several times.
+  [61/66] 1-72695-A-26.wav -> A woman is laughing.
+  [62/66] 1-79236-A-36.wav -> A high-pitched whining and whirring sound, like a power tool starting up, is heard.
+  [63/66] 1-79711-A-32.wav -> A person is typing on a computer keyboard.
+  [64/66] 1-84704-A-39.wav -> A loud crash is heard as glass shatters.
+  [65/66] 1-88807-A-39.wav -> A set of keys are jingling and rattling.
+  [66/66] 1-97793-A-31.wav -> A clicking sound is made by a household robot.
+  5LpN3gDmAk7_1      level_1  n=100  avlmaps= 73.0%  textbridge= 50.0%
+  5LpN3gDmAk7_1      level_2  n=170  avlmaps= 82.9%  textbridge= 66.5%
+  5LpN3gDmAk7_1      level_3  n=170  avlmaps= 87.6%  textbridge= 85.3%
+  JmbYfDe2QKZ_1      level_1  n= 90  avlmaps= 73.3%  textbridge= 55.6%
+  JmbYfDe2QKZ_1      level_2  n= 90  avlmaps= 94.4%  textbridge= 86.7%
+  JmbYfDe2QKZ_1      level_3  n= 90  avlmaps= 86.7%  textbridge= 55.6%
+  JmbYfDe2QKZ_2      level_1  n=100  avlmaps= 73.0%  textbridge= 51.0%
+  JmbYfDe2QKZ_2      level_2  n=120  avlmaps= 83.3%  textbridge= 74.2%
+  JmbYfDe2QKZ_2      level_3  n=120  avlmaps= 85.0%  textbridge= 83.3%
+  UwV83HsGsw3_1      level_1  n=100  avlmaps= 73.0%  textbridge= 52.0%
+  UwV83HsGsw3_1      level_2  n=150  avlmaps= 80.7%  textbridge= 64.0%
+  UwV83HsGsw3_1      level_3  n=150  avlmaps= 82.0%  textbridge= 69.3%
+  Vt2qJdWjCF2_1      level_1  n=100  avlmaps= 73.0%  textbridge= 44.0%
+  Vt2qJdWjCF2_1      level_2  n=170  avlmaps= 81.2%  textbridge= 68.2%
+  Vt2qJdWjCF2_1      level_3  n=170  avlmaps= 78.2%  textbridge= 65.9%
+  YmJkqBEsHnH_1      level_1  n= 60  avlmaps= 91.7%  textbridge= 71.7%
+  YmJkqBEsHnH_1      level_2  n= 60  avlmaps= 90.0%  textbridge= 58.3%
+  YmJkqBEsHnH_1      level_3  n= 60  avlmaps= 85.0%  textbridge= 73.3%
+  gTV8FGcVJC9_1      level_1  n=100  avlmaps= 73.0%  textbridge= 50.0%
+  gTV8FGcVJC9_1      level_2  n=170  avlmaps= 82.9%  textbridge= 66.5%
+  gTV8FGcVJC9_1      level_3  n=170  avlmaps= 76.5%  textbridge= 67.6%
+  jh4fc5c5qoQ_1      level_1  n= 70  avlmaps= 80.0%  textbridge= 54.3%
+  jh4fc5c5qoQ_1      level_2  n= 70  avlmaps= 85.7%  textbridge= 48.6%
+  jh4fc5c5qoQ_1      level_3  n= 70  avlmaps= 88.6%  textbridge= 95.7%
+  mJXqzFtmKg4_1      level_1  n=100  avlmaps= 73.0%  textbridge= 54.0%
+  mJXqzFtmKg4_1      level_2  n=200  avlmaps= 80.5%  textbridge= 57.5%
+  mJXqzFtmKg4_1      level_3  n=210  avlmaps= 82.4%  textbridge= 57.6%
+  ur6pFq6Qu1A_1      level_1  n=100  avlmaps= 73.0%  textbridge= 43.0%
+  ur6pFq6Qu1A_1      level_2  n=200  avlmaps= 80.5%  textbridge= 60.0%
+  ur6pFq6Qu1A_1      level_3  n=210  avlmaps= 82.4%  textbridge= 62.9%
+
+  TOTAL  n=3740  avlmaps= 80.9%  textbridge= 63.5%
+
+[bench] wrote -> /usershome/cs671_user6/.MM2/AVLMaps/textbridge/benchmark_real.json

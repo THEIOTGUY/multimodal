@@ -1,0 +1,112 @@
+data_paths:
+  habitat_scene_dir: /usershome/cs671_user6/mp3d_data/extracted/mp3d/
+  avlmaps_data_dir: /usershome/cs671_user6/avlmaps_data/
+  agent_mesh_dir: /usershome/cs671_user6/avlmaps_data/habitat_objects/locobot_merged
+  esc50_meta_path: /usershome/cs671_user6/ESC-50-master/meta/esc50.csv
+  esc50_audio_dir: /usershome/cs671_user6/ESC-50-master/audio
+sound_data_collect_params:
+  difficulty: level_3
+  is_ambiguous_data: true
+  num_audio_video_per_scene: 20
+  num_tasks_per_scene: 100
+  num_cross_modal_tasks_per_scene: 5
+  fps: 25
+  sample_rate: 44100
+  sound_interval: 1
+  min_dist_between_sound: 1
+  considered_seq_num_per_scene: 20
+  overwrite_audio_frame_ranges: false
+  overwrite_task: true
+  silence_duration_s: 1
+  silence_threshold: 0
+  seed: 1
+  ignore_scene:
+  - gxdoqLR6rwA_1
+sound_config:
+  difficulty:
+    level_1:
+    - Interior/domestic sounds
+    level_2:
+    - Interior/domestic sounds
+    - Human, non-speech sounds
+    level_3:
+    - Interior/domestic sounds
+    - Human, non-speech sounds
+    - Animals
+    level_4:
+    - Interior/domestic sounds
+    - Human, non-speech sounds
+    - Animals
+    - Natural soundscapes
+    level_5:
+    - Interior/domestic sounds
+    - Human, non-speech sounds
+    - Animals
+    - Natural soundscapes
+    - Exterior/urban noises
+  major_categories:
+    Animals:
+    - dog
+    - rooster
+    - pig
+    - cow
+    - frog
+    - cat
+    - hen
+    - insects
+    - sheep
+    - crow
+    Natural soundscapes:
+    - rain
+    - sea_waves
+    - crackling_fire
+    - crickets
+    - chirping_birds
+    - water_drops
+    - wind
+    - pouring_water
+    - toilet_flush
+    - thunderstorm
+    Human, non-speech sounds:
+    - crying_baby
+    - sneezing
+    - clapping
+    - breathing
+    - coughing
+    - footsteps
+    - laughing
+    - brushing_teeth
+    - snoring
+    - drinking_sipping
+    Interior/domestic sounds:
+    - door_wood_knock
+    - mouse_click
+    - keyboard_typing
+    - door_wood_creaks
+    - can_opening
+    - washing_machine
+    - vacuum_cleaner
+    - clock_alarm
+    - clock_tick
+    - glass_breaking
+    Exterior/urban noises:
+    - helicopter
+    - chainsaw
+    - siren
+    - car_horn
+    - engine
+    - train
+    - church_bells
+    - airplane
+    - fireworks
+    - hand_saw
+scene_names:
+- 5LpN3gDmAk7_1
+data_cfg:
+  rgb: true
+  depth: true
+  semantic: true
+  resolution:
+    w: 1080
+    h: 720
+  camera_height: 1.5

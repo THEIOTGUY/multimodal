@@ -1,0 +1,15 @@
+defaults:
+  - data_paths: default
+  - sound_data_collect_params: sound_collect_default
+  - sound_config: sound_config
+
+scene_names:
+  - 5LpN3gDmAk7_1
+data_cfg:
+  rgb: true
+  depth: true
+  semantic: true
+  resolution:
+    w: 1080
+    h: 720
+  camera_height: 1.5

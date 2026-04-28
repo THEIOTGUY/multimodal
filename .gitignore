@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+
+# --- Editors / OS ---
+.vscode/
+.flake8
+.DS_Store
+
+# --- Large model checkpoints / weights ---
+avlmaps/lseg/checkpoints/
+avlmaps/audioclip/assets/
+*.ckpt
+*.pt
+*.pth
+*.bin
+
+# --- Bulk data / generated artifacts ---
+runs/
+distance_prediction/
+features/
+wandb/
+graphs/
+data/
+*obj_names_features.txt
+*place_names_features.txt
+*.npy
+rgb.mp4
+depth.mp4
+DepthCamera*
+DepthCapture*
+query_images/
+
+# --- Datasets (raw scenes too large for git) ---
+dataset/avlmaps_dataset/
+dataset/data/
+dataset/raw/
+
+# --- Keep logs and output pictures (explicit overrides) ---
+!output/
+!output/**
+!outputs/
+!outputs/**

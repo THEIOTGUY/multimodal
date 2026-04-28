@@ -1,0 +1,1870 @@
+{
+  "metadata": {
+    "task": "Top-1 retrieval \u2014 natural-language instruction \u2192 spatial sound source",
+    "n_queries": 99,
+    "n_sources": 9,
+    "encoder_both_sides": "sentence-transformers/all-mpnet-base-v2 (768-d, L2-normalised)",
+    "audio_captioner": {
+      "model": "Qwen/Qwen2.5-Omni-7B",
+      "dtype": "float16",
+      "decoding": "greedy (do_sample=False)",
+      "max_new_tokens": 80,
+      "prompt": "You are an audio captioning model. Listen to the clip and describe what is happening in one rich, descriptive English sentence. Mention the likely source object, the activity, and any context that would help a household robot reason about who or what is making the sound.",
+      "captions_cache": "/usershome/cs671_user6/.MM2/AVLMaps/textbridge/captions.json"
+    },
+    "pipelines": {
+      "avlmaps_class_token": "AVLMaps baseline. Source-side string is the ESC-50 class label (e.g. 'vacuum_cleaner' \u2192 'vacuum cleaner'). Embedded with the same Sentence-BERT encoder so the only thing varying is the source string.",
+      "textbridge_qwen_caption": "TextBridge. Source-side string is the Qwen2.5-Omni-7B caption of the wav clip (e.g. 'A high-pitched whine is being emitted by a small motor.'). Same Sentence-BERT encoder."
+    }
+  },
+  "results": {
+    "avlmaps_class_token_top1": 0.7676767676767676,
+    "textbridge_qwen_caption_top1": 0.8282828282828283,
+    "delta_top1": 0.06060606060606066,
+    "by_source": {
+      "S1": {
+        "class_label": "dog",
+        "qwen_caption": "A dog barks loudly nearby.",
+        "avlmaps_class_token": {
+          "hits": 7,
+          "total": 11,
+          "acc": 0.6363636363636364
+        },
+        "textbridge_qwen_caption": {
+          "hits": 10,
+          "total": 11,
+          "acc": 0.9090909090909091
+        }
+      },
+      "S2": {
+        "class_label": "vacuum_cleaner",
+        "qwen_caption": "A high-pitched whine is being emitted by a small motor.",
+        "avlmaps_class_token": {
+          "hits": 7,
+          "total": 11,
+          "acc": 0.6363636363636364
+        },
+        "textbridge_qwen_caption": {
+          "hits": 4,
+          "total": 11,
+          "acc": 0.36363636363636365
+        }
+      },
+      "S3": {
+        "class_label": "glass_breaking",
+        "qwen_caption": "A loud crash is followed by a series of clanking.",
+        "avlmaps_class_token": {
+          "hits": 11,
+          "total": 11,
+          "acc": 1.0
+        },
+        "textbridge_qwen_caption": {
+          "hits": 10,
+          "total": 11,
+          "acc": 0.9090909090909091
+        }
+      },
+      "S4": {
+        "class_label": "washing_machine",
+        "qwen_caption": "A machine is vibrating and making a high pitched squealing sound.",
+        "avlmaps_class_token": {
+          "hits": 7,
+          "total": 11,
+          "acc": 0.6363636363636364
+        },
+        "textbridge_qwen_caption": {
+          "hits": 8,
+          "total": 11,
+          "acc": 0.7272727272727273
+        }
+      },
+      "S5": {
+        "class_label": "keyboard_typing",
+        "qwen_caption": "A person typing on a computer keyboard.",
+        "avlmaps_class_token": {
+          "hits": 8,
+          "total": 11,
+          "acc": 0.7272727272727273
+        },
+        "textbridge_qwen_caption": {
+          "hits": 11,
+          "total": 11,
+          "acc": 1.0
+        }
+      },
+      "S6": {
+        "class_label": "crying_baby",
+        "qwen_caption": "A baby is crying.",
+        "avlmaps_class_token": {
+          "hits": 11,
+          "total": 11,
+          "acc": 1.0
+        },
+        "textbridge_qwen_caption": {
+          "hits": 10,
+          "total": 11,
+          "acc": 0.9090909090909091
+        }
+      },
+      "S7": {
+        "class_label": "door_wood_knock",
+        "qwen_caption": "A loud knocking sound is being made on a door.",
+        "avlmaps_class_token": {
+          "hits": 11,
+          "total": 11,
+          "acc": 1.0
+        },
+        "textbridge_qwen_caption": {
+          "hits": 11,
+          "total": 11,
+          "acc": 1.0
+        }
+      },
+      "S8": {
+        "class_label": "brushing_teeth",
+        "qwen_caption": "A person is brushing their teeth.",
+        "avlmaps_class_token": {
+          "hits": 8,
+          "total": 11,
+          "acc": 0.7272727272727273
+        },
+        "textbridge_qwen_caption": {
+          "hits": 8,
+          "total": 11,
+          "acc": 0.7272727272727273
+        }
+      },
+      "S9": {
+        "class_label": "pouring_water",
+        "qwen_caption": "A faucet is turned on and off and water is running into a sink.",
+        "avlmaps_class_token": {
+          "hits": 6,
+          "total": 11,
+          "acc": 0.5454545454545454
+        },
+        "textbridge_qwen_caption": {
+          "hits": 10,
+          "total": 11,
+          "acc": 0.9090909090909091
+        }
+      }
+    },
+    "n_caption_wins_only": 19,
+    "n_class_token_wins_only": 13
+  },
+  "rows": [
+    {
+      "query": "where is the dog",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.6742834448814392
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.4305846691131592
+      }
+    },
+    {
+      "query": "where is the pet making noise",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.49619799852371216
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.648428738117218
+      }
+    },
+    {
+      "query": "find the barking animal",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5316886901855469
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.7581651210784912
+      }
+    },
+    {
+      "query": "what creature is being loud",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.3131641149520874
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.6252485513687134
+      }
+    },
+    {
+      "query": "I hear an animal in the house",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.4860033690929413
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.6306037306785583
+      }
+    },
+    {
+      "query": "the pet wants attention",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5535942316055298
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5518972873687744
+      }
+    },
+    {
+      "query": "who is making barking sounds",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.47605693340301514
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.7706855535507202
+      }
+    },
+    {
+      "query": "locate the source of the bark",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.36126071214675903
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5005626678466797
+      }
+    },
+    {
+      "query": "is there a dog in the house",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5329973697662354
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.43903210759162903
+      }
+    },
+    {
+      "query": "the pup is loud right now",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.5271087884902954
+      },
+      "textbridge": {
+        "pick_class": "dog",
+        "ok": true,
+        "cosine": 0.7332507967948914
+      }
+    },
+    {
+      "query": "find where the woof is coming from",
+      "gt_sid": "S1",
+      "gt_class": "dog",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.32353901863098145
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": false,
+        "cosine": 0.42496514320373535
+      }
+    },
+    {
+      "query": "where is the vacuum cleaner",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.7365082502365112
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.2544344365596771
+      }
+    },
+    {
+      "query": "find the small whining motor",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.4048079550266266
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.7748985886573792
+      }
+    },
+    {
+      "query": "which cleaning device is running",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.605167031288147
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.32775890827178955
+      }
+    },
+    {
+      "query": "I hear a high-pitched motor",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.3408839702606201
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.7542767524719238
+      }
+    },
+    {
+      "query": "who is doing the floor cleaning",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.5277961492538452
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.3460800051689148
+      }
+    },
+    {
+      "query": "find the appliance with a whining sound",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.44365447759628296
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.6712511777877808
+      }
+    },
+    {
+      "query": "where is someone vacuuming",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.676714301109314
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.34823548793792725
+      }
+    },
+    {
+      "query": "the floor cleaner is on",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.605373740196228
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.3761323094367981
+      }
+    },
+    {
+      "query": "find the source of the buzz",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.17248699069023132
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.3510560393333435
+      }
+    },
+    {
+      "query": "which device sounds like a small engine",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.2956743836402893
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.5708916187286377
+      }
+    },
+    {
+      "query": "who is vacuuming the carpet",
+      "gt_sid": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": true,
+        "cosine": 0.6020960807800293
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.27065420150756836
+      }
+    },
+    {
+      "query": "what just shattered",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.7006365060806274
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.5066070556640625
+      }
+    },
+    {
+      "query": "find the broken glass",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.7094303369522095
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.26942548155784607
+      }
+    },
+    {
+      "query": "where was that loud crash",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.3524370491504669
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.6805001497268677
+      }
+    },
+    {
+      "query": "something fell and broke",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.5829567909240723
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.5092254281044006
+      }
+    },
+    {
+      "query": "which appliance just had a loud accident",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.42897137999534607
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.5043694972991943
+      }
+    },
+    {
+      "query": "find the source of the clattering",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.30361950397491455
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.572798490524292
+      }
+    },
+    {
+      "query": "who broke something",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.5626217126846313
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.3739996552467346
+      }
+    },
+    {
+      "query": "where is the broken object",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.47854501008987427
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.3323711156845093
+      }
+    },
+    {
+      "query": "I heard glass shatter",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.772880494594574
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.47693172097206116
+      }
+    },
+    {
+      "query": "something just dropped and clanked",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.37735551595687866
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.7036607265472412
+      }
+    },
+    {
+      "query": "where is the kitchen disaster",
+      "gt_sid": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.285378634929657
+      },
+      "textbridge": {
+        "pick_class": "glass_breaking",
+        "ok": true,
+        "cosine": 0.2843232750892639
+      }
+    },
+    {
+      "query": "find the washing machine",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.7289561033248901
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.2673023045063019
+      }
+    },
+    {
+      "query": "which appliance might be malfunctioning",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.44184353947639465
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.33989936113357544
+      }
+    },
+    {
+      "query": "where is the laundry running",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.5660589337348938
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": false,
+        "cosine": 0.2691921591758728
+      }
+    },
+    {
+      "query": "find the vibrating appliance",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": false,
+        "cosine": 0.4332500100135803
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.6219637393951416
+      }
+    },
+    {
+      "query": "who started the wash cycle",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.5713897943496704
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.1602291762828827
+      }
+    },
+    {
+      "query": "the laundry is going",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.6629253625869751
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": false,
+        "cosine": 0.26607051491737366
+      }
+    },
+    {
+      "query": "find the source of the squeal",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.2754926383495331
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.6335190534591675
+      }
+    },
+    {
+      "query": "which device is shaking",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "glass_breaking",
+        "ok": false,
+        "cosine": 0.27679046988487244
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.44004225730895996
+      }
+    },
+    {
+      "query": "where is the heavy-duty appliance running",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.45272910594940186
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.34889957308769226
+      }
+    },
+    {
+      "query": "find the rumbling device",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.2842019498348236
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.60245680809021
+      }
+    },
+    {
+      "query": "I hear something vibrating",
+      "gt_sid": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": false,
+        "cosine": 0.33058613538742065
+      },
+      "textbridge": {
+        "pick_class": "washing_machine",
+        "ok": true,
+        "cosine": 0.6563458442687988
+      }
+    },
+    {
+      "query": "who is typing",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.7377772331237793
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.709041953086853
+      }
+    },
+    {
+      "query": "where is the keyboard",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.5957895517349243
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.4855162799358368
+      }
+    },
+    {
+      "query": "where can I find the active home office",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.16291041672229767
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.12356396019458771
+      }
+    },
+    {
+      "query": "find someone using a computer",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.28665345907211304
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.4505317211151123
+      }
+    },
+    {
+      "query": "who is at the desk",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.2844991087913513
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.4243238568305969
+      }
+    },
+    {
+      "query": "the home office is occupied",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "vacuum_cleaner",
+        "ok": false,
+        "cosine": 0.24454271793365479
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.25415268540382385
+      }
+    },
+    {
+      "query": "find the workspace in use",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.14394637942314148
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.16888779401779175
+      }
+    },
+    {
+      "query": "who is doing computer work",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.3952738046646118
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.541946291923523
+      }
+    },
+    {
+      "query": "where is the click-clack of typing",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.6391143798828125
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.5020292401313782
+      }
+    },
+    {
+      "query": "someone is at the keyboard",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.7183935046195984
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.8816725015640259
+      }
+    },
+    {
+      "query": "find the active workstation",
+      "gt_sid": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.1784222424030304
+      },
+      "textbridge": {
+        "pick_class": "keyboard_typing",
+        "ok": true,
+        "cosine": 0.19434918463230133
+      }
+    },
+    {
+      "query": "the baby is crying",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.5994353294372559
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.9677339792251587
+      }
+    },
+    {
+      "query": "what child needs comfort right now",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.3988083004951477
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.3572348356246948
+      }
+    },
+    {
+      "query": "find the infant",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.42813998460769653
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.42610061168670654
+      }
+    },
+    {
+      "query": "who needs to be soothed",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.40866971015930176
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.31771939992904663
+      }
+    },
+    {
+      "query": "the kid is upset",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.45705950260162354
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.5193626880645752
+      }
+    },
+    {
+      "query": "where is the baby",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.4746672511100769
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.4025917053222656
+      }
+    },
+    {
+      "query": "who is wailing",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.3503108322620392
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": false,
+        "cosine": 0.24526305496692657
+      }
+    },
+    {
+      "query": "find the source of the crying",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.575334906578064
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.5004771947860718
+      }
+    },
+    {
+      "query": "the toddler is fussy",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.25266149640083313
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.370048463344574
+      }
+    },
+    {
+      "query": "who needs a parent",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.26920148730278015
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.21414333581924438
+      }
+    },
+    {
+      "query": "where is the unhappy little one",
+      "gt_sid": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.43897193670272827
+      },
+      "textbridge": {
+        "pick_class": "crying_baby",
+        "ok": true,
+        "cosine": 0.33182525634765625
+      }
+    },
+    {
+      "query": "who is at the door",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.6113337278366089
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.579304575920105
+      }
+    },
+    {
+      "query": "who is at the front entrance",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.32738178968429565
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.311828076839447
+      }
+    },
+    {
+      "query": "someone is knocking",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.7229154109954834
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.7846039533615112
+      }
+    },
+    {
+      "query": "find the visitor at the door",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.5215489864349365
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.4709276556968689
+      }
+    },
+    {
+      "query": "I hear knocking",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.6784149408340454
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.7364373803138733
+      }
+    },
+    {
+      "query": "is someone trying to enter",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.4135257303714752
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.48236048221588135
+      }
+    },
+    {
+      "query": "who wants to come in",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.3262004554271698
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.2365761250257492
+      }
+    },
+    {
+      "query": "find the source of the rapping sound",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.23369766771793365
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.3494095802307129
+      }
+    },
+    {
+      "query": "the front entrance has someone",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.3682461977005005
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.40147462487220764
+      }
+    },
+    {
+      "query": "answer the door",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.6216292381286621
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.4687788784503937
+      }
+    },
+    {
+      "query": "who is tapping on the wood",
+      "gt_sid": "S7",
+      "gt_class": "door_wood_knock",
+      "avlmaps": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.569489598274231
+      },
+      "textbridge": {
+        "pick_class": "door_wood_knock",
+        "ok": true,
+        "cosine": 0.38489478826522827
+      }
+    },
+    {
+      "query": "who is brushing their teeth",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.7496137619018555
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.6731425523757935
+      }
+    },
+    {
+      "query": "who is doing their morning hygiene",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.4937478303909302
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.4026796817779541
+      }
+    },
+    {
+      "query": "find the bathroom activity",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.3177344799041748
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": false,
+        "cosine": 0.33651506900787354
+      }
+    },
+    {
+      "query": "someone is in the bathroom",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.3192541003227234
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.5260085463523865
+      }
+    },
+    {
+      "query": "find the morning routine in progress",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.2720220386981964
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": false,
+        "cosine": 0.16539664566516876
+      }
+    },
+    {
+      "query": "who is at the sink for hygiene",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.453147292137146
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": false,
+        "cosine": 0.5042755603790283
+      }
+    },
+    {
+      "query": "where is the toothbrush being used",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.6242631673812866
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.6467376947402954
+      }
+    },
+    {
+      "query": "find the dental care happening",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.524919331073761
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.45585179328918457
+      }
+    },
+    {
+      "query": "someone is doing oral hygiene",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.7012460827827454
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.8269482851028442
+      }
+    },
+    {
+      "query": "who is in the bathroom brushing",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.6435921788215637
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.6968196630477905
+      }
+    },
+    {
+      "query": "find where teeth are being cleaned",
+      "gt_sid": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.5626578330993652
+      },
+      "textbridge": {
+        "pick_class": "brushing_teeth",
+        "ok": true,
+        "cosine": 0.5897105932235718
+      }
+    },
+    {
+      "query": "I want to wash my hands",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.40543869137763977
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.30093735456466675
+      }
+    },
+    {
+      "query": "where can I find the sink",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.2894256114959717
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.4414360523223877
+      }
+    },
+    {
+      "query": "the faucet is on",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.5231792330741882
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.7226959466934204
+      }
+    },
+    {
+      "query": "I hear water running",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.42290234565734863
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.4391980469226837
+      }
+    },
+    {
+      "query": "where is water flowing",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.5295842885971069
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.4875635504722595
+      }
+    },
+    {
+      "query": "find the running tap",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.3508009910583496
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.42037150263786316
+      }
+    },
+    {
+      "query": "I need to rinse off",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "brushing_teeth",
+        "ok": false,
+        "cosine": 0.44261080026626587
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.33965742588043213
+      }
+    },
+    {
+      "query": "where can I get clean water",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.321788489818573
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.23574918508529663
+      }
+    },
+    {
+      "query": "find the source of the water sound",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.34204569458961487
+      },
+      "textbridge": {
+        "pick_class": "vacuum_cleaner",
+        "ok": false,
+        "cosine": 0.4781450629234314
+      }
+    },
+    {
+      "query": "the kitchen tap is on",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.47071725130081177
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.5464737415313721
+      }
+    },
+    {
+      "query": "I need to use the sink",
+      "gt_sid": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps": {
+        "pick_class": "washing_machine",
+        "ok": false,
+        "cosine": 0.3909173607826233
+      },
+      "textbridge": {
+        "pick_class": "pouring_water",
+        "ok": true,
+        "cosine": 0.5364521741867065
+      }
+    }
+  ],
+  "caption_wins_only": [
+    {
+      "query": "what creature is being loud",
+      "gt": "S1",
+      "gt_class": "dog",
+      "avlmaps_pick": "door_wood_knock",
+      "textbridge_pick": "dog"
+    },
+    {
+      "query": "I hear an animal in the house",
+      "gt": "S1",
+      "gt_class": "dog",
+      "avlmaps_pick": "door_wood_knock",
+      "textbridge_pick": "dog"
+    },
+    {
+      "query": "locate the source of the bark",
+      "gt": "S1",
+      "gt_class": "dog",
+      "avlmaps_pick": "door_wood_knock",
+      "textbridge_pick": "dog"
+    },
+    {
+      "query": "find the small whining motor",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "vacuum_cleaner"
+    },
+    {
+      "query": "I hear a high-pitched motor",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "vacuum_cleaner"
+    },
+    {
+      "query": "find the appliance with a whining sound",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "vacuum_cleaner"
+    },
+    {
+      "query": "find the vibrating appliance",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "washing_machine"
+    },
+    {
+      "query": "find the source of the squeal",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "door_wood_knock",
+      "textbridge_pick": "washing_machine"
+    },
+    {
+      "query": "which device is shaking",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "glass_breaking",
+      "textbridge_pick": "washing_machine"
+    },
+    {
+      "query": "I hear something vibrating",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "door_wood_knock",
+      "textbridge_pick": "washing_machine"
+    },
+    {
+      "query": "where can I find the active home office",
+      "gt": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "keyboard_typing"
+    },
+    {
+      "query": "the home office is occupied",
+      "gt": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "keyboard_typing"
+    },
+    {
+      "query": "find the active workstation",
+      "gt": "S5",
+      "gt_class": "keyboard_typing",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "keyboard_typing"
+    },
+    {
+      "query": "someone is in the bathroom",
+      "gt": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "I want to wash my hands",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "where can I find the sink",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "I need to rinse off",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "brushing_teeth",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "where can I get clean water",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "I need to use the sink",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    }
+  ],
+  "class_token_wins_only": [
+    {
+      "query": "where is the vacuum cleaner",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "which cleaning device is running",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "who is doing the floor cleaning",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "where is someone vacuuming",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "the floor cleaner is on",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "who is vacuuming the carpet",
+      "gt": "S2",
+      "gt_class": "vacuum_cleaner",
+      "avlmaps_pick": "vacuum_cleaner",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "find the broken glass",
+      "gt": "S3",
+      "gt_class": "glass_breaking",
+      "avlmaps_pick": "glass_breaking",
+      "textbridge_pick": "door_wood_knock"
+    },
+    {
+      "query": "where is the laundry running",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "who started the wash cycle",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "brushing_teeth"
+    },
+    {
+      "query": "the laundry is going",
+      "gt": "S4",
+      "gt_class": "washing_machine",
+      "avlmaps_pick": "washing_machine",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "who is wailing",
+      "gt": "S6",
+      "gt_class": "crying_baby",
+      "avlmaps_pick": "crying_baby",
+      "textbridge_pick": "vacuum_cleaner"
+    },
+    {
+      "query": "who is at the sink for hygiene",
+      "gt": "S8",
+      "gt_class": "brushing_teeth",
+      "avlmaps_pick": "brushing_teeth",
+      "textbridge_pick": "pouring_water"
+    },
+    {
+      "query": "find the source of the water sound",
+      "gt": "S9",
+      "gt_class": "pouring_water",
+      "avlmaps_pick": "pouring_water",
+      "textbridge_pick": "vacuum_cleaner"
+    }
+  ]
+}

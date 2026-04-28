@@ -1,0 +1,5 @@
+habitat_scene_dir: "/usershome/cs671_user6/mp3d_data/extracted/mp3d/"
+avlmaps_data_dir: "/usershome/cs671_user6/avlmaps_data/"
+agent_mesh_dir: "/usershome/cs671_user6/avlmaps_data/habitat_objects/locobot_merged"
+esc50_meta_path: "/usershome/cs671_user6/ESC-50-master/meta/esc50.csv"
+esc50_audio_dir: "/usershome/cs671_user6/ESC-50-master/audio"
